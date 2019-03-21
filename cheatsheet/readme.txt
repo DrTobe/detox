@@ -1,0 +1,1 @@
+The "cheatsheet" was designed on http://www.keyboard-layout-editor.com/. To edit it there, the JSON has to be uploaded via the 'Upload JSON' button. Just copying it to the 'Raw Data' tab did not work.
