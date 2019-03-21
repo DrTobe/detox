@@ -1,0 +1,54 @@
+// Tobbe 2017-06-16
+// These partial variants assign ISO_LevelXY_Latch to various XKB keycodes
+// so that these levels can be latched instead of shifted.
+// This file has to be copied to /usr/share/X11/xkb/symbols.
+
+// Both shift keys latch the second shift level. First, I implemented level3_caps which was 
+// inspired by xkb/symbols/level3.
+// On the one hand, we need to set the key to produce ISO_Level2_Latch, on the other hand we need
+// the modifier_map because otherwise, the predefined compat-action that looks like
+// interpret ISO_Level2_Latch+Exactly(Shift) {
+//    useModMapMods=level1;
+//    action= LatchMods(modifiers=Shift,clearLocks,latchToLock);
+// };
+// will not work.
+partial modifier_keys
+xkb_symbols "level2_shift" {
+  key <LFSH> {
+    type[Group1]="ONE_LEVEL",
+    symbols[Group1] = [ ISO_Level2_Latch ]
+  };
+  key <RTSH> {
+    type[Group1]="ONE_LEVEL",
+    symbols[Group1] = [ ISO_Level2_Latch ]
+  };
+  modifier_map Shift { <LFSH> };
+  modifier_map Shift { <RTSH> };
+};
+
+// The caps lock key latches the third shift level
+partial modifier_keys
+xkb_symbols "level3_caps" {
+  // Now, define caps as level3 latch
+  key <CAPS> {
+    type[Group1]="ONE_LEVEL",
+    symbols[Group1] = [ ISO_Level3_Latch ]
+  };
+  // And include level3(modifier_mapping) as it is done always, see level3
+  include "level3(modifier_mapping)"
+};
+
+// The right alt key latches the third shift level
+partial modifier_keys
+xkb_symbols "level3_ralt" {
+  // First, we undo the effect of possibly including level3(ralt_switch) or anything else
+  // This did not seem to work, so I undid it. In the result, it worked, so I was satisfied.
+  //include "level3(ralt_alt)"
+  // Now, define right alt as level3 latch
+  key <RALT> {
+    type[Group1]="ONE_LEVEL",
+    symbols[Group1] = [ ISO_Level3_Latch ]
+  };
+  // And include level3(modifier_mapping) as it is done always, see level3
+  include "level3(modifier_mapping)"
+};
