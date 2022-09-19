@@ -34,8 +34,6 @@ xkb_symbols "level3_caps" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Latch ]
   };
-  // And include level3(modifier_mapping) as it is done always, see level3
-  include "level3(modifier_mapping)"
 };
 
 // The right alt key latches the third shift level
@@ -49,6 +47,4 @@ xkb_symbols "level3_ralt" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Latch ]
   };
-  // And include level3(modifier_mapping) as it is done always, see level3
-  include "level3(modifier_mapping)"
 };
