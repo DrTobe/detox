@@ -5659,10 +5659,10 @@
     <!--
     <layout>
       <configItem>
-        <name>tobbe</name>
+        <name>detox</name>
         
-        <shortDescription>tobbe</shortDescription>
-        <description>EurKey Tobbe</description>
+        <shortDescription>detox</shortDescription>
+        <description>EurKey Detox</description>
         <languageList>
           <iso639Id>eng</iso639Id>
           <iso639Id>ger</iso639Id>
@@ -5672,10 +5672,10 @@
     -->
     <layout>
       <configItem>
-        <name>tobbe</name>
+        <name>detox</name>
         
-        <shortDescription>tobbe</shortDescription>
-        <description>Tobbe Custom</description>
+        <shortDescription>detox</shortDescription>
+        <description>Detox</description>
         <languageList>
           <iso639Id>ger</iso639Id>
           <iso639Id>eng</iso639Id>
@@ -5685,13 +5685,13 @@
         <variant>
           <configItem>
             <name>eu</name>
-            <description>Tobbe (eu)</description>
+            <description>Detox (eu)</description>
           </configItem>
         </variant>
         <variant>
           <configItem>
             <name>de</name>
-            <description>Tobbe (de)</description>
+            <description>Detox (de)</description>
           </configItem>
         </variant>
       </variantList>

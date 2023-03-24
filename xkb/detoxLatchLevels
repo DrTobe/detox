@@ -1,4 +1,4 @@
-// Tobbe 2017-06-16
+// 2017-06-16
 // These partial variants assign ISO_LevelXY_Latch to various XKB keycodes
 // so that these levels can be latched instead of shifted.
 // This file has to be copied to /usr/share/X11/xkb/symbols.

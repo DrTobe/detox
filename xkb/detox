@@ -8,7 +8,7 @@ xkb_symbols "eu"  {
 
         include "eu(basic)"
  
-        name[Group1] = "EurKEY tobbe-custom (level3 on capslock, both shift and caps latched, eurosign on e)";
+        name[Group1] = "EurKEY detox (level3 on capslock, both shift and caps latched, eurosign on e)";
 
         include "tLatchLevels(level2_shift)"
         include "tLatchLevels(level3_caps)"
@@ -143,14 +143,13 @@ xkb_symbols "eu"  {
     //include "level3(ralt_switch)"
 //};
 
-// TOBBE DE
-// To create tobbe(de) layout, we use the default german layout, put numbers and default special characters on the AB, AC and AD rows, add caps as level3 and latch shift and level3
+// To create detox(de) layout, we use the default german layout, put numbers and default special characters on the AB, AC and AD rows, add caps as level3 and latch shift and level3
 // TODO: Should we revert the kpdl(comma) inclusion?
 partial alphanumeric_keys
 xkb_symbols "de" {
 	include "de(basic)"
 	
-	name[Group1]="German tobbe-custom (numbers and default special characters on level3 keys, level3 on ralt and caps, both shift and caps latched)";
+	name[Group1]="German detox (numbers and default special characters on level3 keys, level3 on ralt and caps, both shift and caps latched)";
 	
 	// row: ^ 1 2 3 4 5 6 7 8 9 0 ß
 	//key <TLDE>	{ [     grave, asciitilde,      notsign,      notsign ]	};
