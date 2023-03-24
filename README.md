@@ -19,10 +19,23 @@ It follows these design principles:
 
 ![Example Output](cheatsheet/keyboard-layout-debased.png)
 
-## XKB mapping
+## XKB mapping (GNU/Linux)
 
 To use, copy `detox` and `detoxLatchLevels` to `/usr/share/X11/xkb/symbols`.
 
 Then, run `setxkbmap -layout detox -variant de`.
 
 To install this layout for a desktop environment (tested with xfce), the `<layout>` item in `evdev.xml` starting in line 5673 has to be copied into the `<layoutList>` of `/usr/share/X11/xkb/symbols/evdev.xml`. This file is overridden whenever the according package is upgraded so this has to be done again after an upgrade.
+
+## Bundle/Keylayout (macOS)
+
+To install the macOS version, just double-click `detox.bundle` in `Finder`, log out and back in
+again and select the keyboard layout in the settings.
+
+The macOS version differs to the GNU/Linux version in the following ways:
+* The `Option` key is used to activate the third layer, `CapsLock` is unchanged
+* Until now, no latching is implemented
+* `@` is additionally on `Option`+`-` to avoid getting used to `Option`+`q` which is too close to
+`Cmd`+`q`. The latter closes the current application and may be undesirable in many cases. Dropping
+`+` from `Option`+`-` is possible because the default `+` position is still acceptable.
+* `|` is back on on `Option`+`<`, `~` on `Option`+`+`
