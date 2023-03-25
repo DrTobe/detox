@@ -39,3 +39,6 @@ The macOS version differs to the GNU/Linux version in the following ways:
 `Cmd`+`q`. The latter closes the current application and may be undesirable in many cases. Dropping
 `+` from `Option`+`-` is possible because the default `+` position is still acceptable.
 * `|` is back on on `Option`+`<`, `~` on `Option`+`+`
+
+### Optional
+* System Settings -> Keyboard -> Keyboard Shortcuts -> Modifier Keys -> Select Keyboard -> Caps Lock key action: Option
