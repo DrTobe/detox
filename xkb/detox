@@ -10,9 +10,9 @@ xkb_symbols "eu"  {
  
         name[Group1] = "EurKEY detox (level3 on capslock, both shift and caps latched, eurosign on e)";
 
-        include "tLatchLevels(level2_shift)"
-        include "tLatchLevels(level3_caps)"
-        include "tLatchLevels(level3_ralt)"
+        include "detoxLatchLevels(level2_shift)"
+        include "detoxLatchLevels(level3_caps)"
+        include "detoxLatchLevels(level3_ralt)"
         include "eurosign(e)"
 };
 
@@ -245,7 +245,7 @@ xkb_symbols "de" {
     key <AB09>	{ [    period,      colon,             question,     division 	] };
     key <AB10>	{ [     minus, underscore,                 plus,     emdash	] };
     
-    include "tLatchLevels(level2_shift)"
-	include "tLatchLevels(level3_caps)"
-	include "tLatchLevels(level3_ralt)"
+    include "detoxLatchLevels(level2_shift)"
+	include "detoxLatchLevels(level3_caps)"
+	include "detoxLatchLevels(level3_ralt)"
 };

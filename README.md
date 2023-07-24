@@ -23,9 +23,9 @@ It follows these design principles:
 
 To use, copy `detox` and `detoxLatchLevels` to `/usr/share/X11/xkb/symbols`.
 
-Then, run `setxkbmap -layout detox -variant de`.
+Then, run `setxkbmap -layout detox -variant de` (only on X11).
 
-To install this layout for a desktop environment (tested with xfce), the `<layout>` item in `evdev.xml` starting in line 5673 has to be copied into the `<layoutList>` of `/usr/share/X11/xkb/symbols/evdev.xml`. This file is overridden whenever the according package is upgraded so this has to be done again after an upgrade.
+To install this layout for a desktop environment (tested with xfce and gnome), the `<layout>` item in `evdev.xml` starting in line 5673 has to be copied into the `<layoutList>` of `/usr/share/X11/xkb/rules/evdev.xml`. This file is overridden whenever the according package is upgraded so this has to be done again after an upgrade.
 
 ## Bundle/Keylayout (macOS)
 
